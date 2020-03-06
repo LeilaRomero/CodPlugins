@@ -13,7 +13,7 @@ public class plugin {
         GitHub github = GitHubBuilder.fromPropertyFile("").build();
 
         GHRepository repo = github.createRepository(nome,descripcion,
-                "https://github.com/jreyarijon",false);
+                "https://github.com/LeilaRomero",false);
 
     }
 
