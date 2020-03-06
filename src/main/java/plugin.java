@@ -10,7 +10,7 @@ public class plugin {
         String nome = JOptionPane.showInputDialog("Nombre del repositorio");
         String descripcion = JOptionPane.showInputDialog("Descripcion");
 
-        GitHub github = GitHubBuilder.fromPropertyFile("").build();
+        GitHub github = GitHubBuilder.fromPropertyFile().build();
 
         GHRepository repo = github.createRepository(nome,descripcion,
                 "https://github.com/LeilaRomero",false);
