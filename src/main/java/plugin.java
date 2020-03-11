@@ -1,17 +1,24 @@
+import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.errors.GitAPIException;
+import org.eclipse.jgit.internal.storage.file.FileRepository;
 import org.kohsuke.github.GHRepository;
 import org.kohsuke.github.GitHub;
 import org.kohsuke.github.GitHubBuilder;
+import java.io.File;
 
 import javax.swing.*;
+import java.io.File;
 import java.io.IOException;
 
-public class plugin {
-    public static void main(String[] args) throws IOException {
+import static org.eclipse.jgit.util.FileUtils.mkdirs;
 
-        //En este mensaje pedimos que cree el repositorio.
-        String crear = JOptionPane.showInputDialog("Crear repositorio");
+public class plugin {
+    public static void main(String[] args) throws IOException, GitAPIException {
 
         //Se clona el repositorio indicado en la url.
+        Git git = Git.cloneRepository ().setURI ("https://github.com/LeilaRomero/CodPlugins").setDirectory ((new File("/home/local/DANIELCASTELAO/lromerofajar/Escritorio/Cod_Examen/"))).call();
+
+        git.close();
 
 
 
