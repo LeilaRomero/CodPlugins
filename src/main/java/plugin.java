@@ -7,13 +7,14 @@ import java.io.IOException;
 
 public class plugin {
     public static void main(String[] args) throws IOException {
-        String nome = JOptionPane.showInputDialog("Nombre del repositorio");
-        String descripcion = JOptionPane.showInputDialog("Descripcion");
 
-        GitHub github = GitHubBuilder.fromPropertyFile().build();
+        //En este mensaje pedimos que cree el repositorio.
+        String crear = JOptionPane.showInputDialog("Crear repositorio");
 
-        GHRepository repo = github.createRepository(nome,descripcion,
-                "https://github.com/LeilaRomero",false);
+        //Se clona el repositorio indicado en la url.
+
+
+
 
     }
 
