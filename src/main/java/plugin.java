@@ -15,14 +15,14 @@ import static org.eclipse.jgit.util.FileUtils.mkdirs;
 public class plugin {
     public static void main(String[] args) throws IOException, GitAPIException {
 
+        // Perdir para clonar el repositorio.
+        String clonar = JOptionPane.showInputDialog("Clonar repositorio");
+
         //Se clona el repositorio indicado en la url.
-        Git git = Git.cloneRepository ().setURI ("https://github.com/LeilaRomero/CodPlugins").setDirectory ((new File("/home/local/DANIELCASTELAO/lromerofajar/Escritorio/Cod_Examen/"))).call();
+        Git git = Git.cloneRepository ().setURI ("https://github.com/LeilaRomero/CodPlugins").setDirectory ((new File("/home/local/DANIELCASTELAO/lromerofajar/Escritorio/Cod_Examen/"))).setCloneAllBranches(true).call();
 
         git.close();
-
-
-
-
+        
     }
 
 }
